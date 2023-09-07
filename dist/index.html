@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Todo List</title>
+    <link rel="icon" href="./images/favicon/favicon.png"></link>
+    
+  </head>
+  <body>
+<div id="menu">
+    <div class="hamburger"></div>
+        <form id="search-form">
+            <input type="text" placeholder="Search" id="search">
+            <input type="submit" id="submit-search" value="">
+        </form>
+</div>
+
+<section id="main">
+    <div id="sidebar">
+        <h3>My ToDo List</h3>
+        <div class="task-list">
+            <h2>My Tasks:</h2>
+            <div id="task-container">wacko</div>
+            <form data-new-list-form=>
+                <input type="text" id="new-list" placeholder="New Task">
+            </form>
+            <button class="delete-btn">Delete</button>
+
+        </div>
+        
+    
+    </div>
+    <div id="todos">
+        <div id="todo-header">
+            <h2 data-list-title></h2>
+            <p data-list-count></p>
+        </div>
+        <div class="todo-list"></div>
+        <div class="below-todo">
+            <button class="add-btn">Add a task</button>
+            <button class="clear-btn">Remove completed tasks</button>
+        </div>
+        
+    </div>
+</section>
+
+<div id="modal">
+    <div class="container">
+        <h2></h2>
+        <div class="close">+</div>
+        <form id="new-task">
+            <label for="name">Task Name:</label>
+            <input type="text" id="name"placeholder="Task Name" autocomplete="off" required>
+            <br>
+            <label for="date">Due date:</label>
+            <input type="date" id="date">
+            <br>
+            <label for="priority">Priority:</label>
+            <select name="priority" id="priority">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            <br>
+            <label for="description">Description:</label>
+            <textarea rows="6" cols="30" id="description"></textarea>
+            <input type="submit" id="submit">
+        </form>
+    </div>
+</div>
+
+
+
+<div id="overlay"></div>
+
+<template id="task-template">
+  <div class="todo">
+    <div class="todo-content">
+        <div class="task">
+            <input type="checkbox">
+            <label><span class="checkbox"></span></label>
+        </div>
+    </div>
+  </div>
+    
+</template>
+    <script src="main.js" defer></script>
+  </body>
+</html>
